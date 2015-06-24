@@ -1,0 +1,8 @@
+precision mediump float;
+
+varying vec3 vTexturePos;
+uniform sampler2D uTex0;
+
+void main() {
+    gl_FragColor = vec4(texture2DProj(uTex0, vTexturePos).rgb, 1);
+}

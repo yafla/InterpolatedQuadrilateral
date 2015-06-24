@@ -1,0 +1,10 @@
+precision highp float;
+uniform mat4 uMVPMatrix;
+attribute vec4 aPosition;
+attribute vec3 aTexturePos;
+varying vec3 vTexturePos;
+
+void main() {
+  gl_Position = uMVPMatrix * aPosition;
+  vTexturePos = aTexturePos.xyz;
+}
